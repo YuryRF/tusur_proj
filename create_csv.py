@@ -289,13 +289,14 @@ def create_bars_dataset(tf: TF, path_dir: str, add_path: str = ""):
 
 
 if __name__ == '__main__':
-    dir_1w = r"C:\SBProData\local_cachedata\v1.2\bars\BR\Auto\604800\0.01\Central Standard Time"
-    dir_1d = r"C:\SBProData\local_cachedata\v1.2\bars\BR\Auto\86400\0.01\Central Standard Time"
-    dir_1h = r"C:\SBProData\local_cachedata\v1.2\bars\BR\Auto\3600\0.01\Central Standard Time"
-    dir_5m = r"C:\SBProData\local_cachedata\v1.2\ticks\BR\Auto\300\0.01\Central Standard Time\0.0"
-    create_bars_dataset("1w", dir_1w)
-    create_bars_dataset("1d", dir_1d)
-    create_bars_dataset("1h", dir_1h)
-    create_bars_dataset("5m", dir_5m)
+    dir_1w = r"/content/data_source/604800/0.01/Central Standard Time"
+    dir_1d = r"/content/data_source/86400/0.01/Central Standard Time"
+    dir_1h = r"/content/data_source/3600/0.01/Central Standard Time"
+    dir_5m = r"/content/data_source/300/0.01/Central Standard Time/0.0"
+    new_path = r"/content/drive/MyDrive/Colab_Notebooks/AI_2025/M14/data/"
+    create_bars_dataset("1w", dir_1w, new_path)
+    create_bars_dataset("1d", dir_1d, new_path)
+    create_bars_dataset("1h", dir_1h, new_path)
+    create_bars_dataset("5m", dir_5m, new_path)
 
 # end
